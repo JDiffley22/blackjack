@@ -1,3 +1,8 @@
+let player = {
+    name: "Player",
+    chips: 200
+}
+
 let cards = []
 let sum = 0
 let hasBlackJack = false
@@ -9,11 +14,6 @@ let gameCards = document.getElementById("cards")
 let playerSave = document.getElementById("playerSave")
 playerSave.textContent = player.name + ": $" + player.chips
 
-
-let player = {
-    name: "Player",
-    chips: 200
-}
 function getRandomCard() {
     let randomNumber = Math.floor(Math.random() * 13) + 1
     if (randomNumber > 10) {
