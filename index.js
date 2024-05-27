@@ -6,9 +6,14 @@ let message = ""
 let messageAsk = document.getElementById("message-ask")
 let messageSum = document.getElementById("message-sum")
 let gameCards = document.getElementById("cards")
+let playerSave = document.getElementById("playerSave")
+playerSave.textContent = player.name + ": $" + player.chips
 
-console.log(cards)
 
+let player = {
+    name: "Player",
+    chips: 200
+}
 function getRandomCard() {
     let randomNumber = Math.floor(Math.random() * 13) + 1
     if (randomNumber > 10) {
