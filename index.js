@@ -14,6 +14,12 @@ let gameCards = document.getElementById("cards")
 let playerSave = document.getElementById("playerSave")
 playerSave.textContent = player.name + ": $" + player.chips
 
+const cardImages = [
+    "images/2.png", "images/3.png", "images/4.png",
+    "images/5.png", "images/6.png", "images/7.png", 
+    "images/8.png", "images/9.png", "images/10.png", "images/11.png"
+];
+
 function getRandomCard() {
     let randomNumber = Math.floor(Math.random() * 13) + 1
     if (randomNumber > 10) {
@@ -35,9 +41,12 @@ function startGame(){
 }
 
 function renderGame() {
-    gameCards.textContent = "Cards: "
+    gameCards.innerHTML = "Cards: "
     for (let i = 0; i < cards.length; i++) {
-        gameCards.textContent += cards[i] + " "
+        let cardImage = document.createElement("img")
+        cardImage.src = cardImages[cards[i] - 1]
+        cardImage.style.width = "80px"
+        gameCards.appendChild(cardImage)
     }
 
     messageSum.textContent = "Sum: " + sum
