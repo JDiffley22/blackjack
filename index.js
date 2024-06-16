@@ -15,13 +15,13 @@ let playerSave = document.getElementById("playerSave")
 playerSave.textContent = player.name + ": $" + player.chips
 
 const cardImages = [
-    "images/2.png", "images/3.png", "images/4.png",
-    "images/5.png", "images/6.png", "images/7.png", 
-    "images/8.png", "images/9.png", "images/10.png", "images/11.png"
+    "images/ace.png", "images/2.png", "images/3.png", "images/4.png",
+    "images/5.png", "images/6.png", "images/7.png", "images/8.png",
+    "images/9.png", "images/10.png", "images/ace.png"
 ];
 
 function getRandomCard() {
-    let randomNumber = Math.floor(Math.random() * 13) + 1
+    let randomNumber = Math.floor(Math.random() * 11) + 1
     if (randomNumber > 10) {
         return 10
     } else if (randomNumber === 1){
