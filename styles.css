@@ -12,6 +12,11 @@ h1 {
     font-size: 40pt;
 }
 
+#cards {
+    display: flex;
+    justify-content: center;
+}
+
 .game-section {
     display: flex;
     flex-direction: column;
@@ -20,6 +25,7 @@ h1 {
 
 #message-ask {
     font-style: italic;
+    color: goldenrod;
 }
 
 
