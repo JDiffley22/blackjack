@@ -1,6 +1,5 @@
 let player = {
-    name: "Player",
-    chips: 200
+    name: "Player"
 }
 
 let computer = {
@@ -22,7 +21,6 @@ let gameCards = document.getElementById("cards")
 let computerCards = document.getElementById("computer-cards")
 let computerSum = document.getElementById("computer-sum")
 let playerSave = document.getElementById("playerSave")
-playerSave.textContent = player.name + ": $" + player.chips
 
 const cardImages = [
     "images/ace.png", "images/2.png", "images/3.png", "images/4.png",
@@ -122,19 +120,15 @@ function computerTurn() {
     checkWinner()
 }
 
-// updated checkWinner function 
 function checkWinner() {
-    // Check if player or computer has Blackjack
     if (sum === 21) {
         message = "You win with Blackjack!";
     } else if (computer.sum === 21) {
         message = "Computer wins with Blackjack!";
-    // Check if either player exceeds 21
     } else if (sum > 21) {
         message = "Computer wins!";
     } else if (computer.sum > 21) {
         message = "You win!";
-    // Check if the player or computer is alive and compare sums
     } else if (!isAlive && !computer.isAlive) {
         message = "Both lose!";
     } else if (sum > computer.sum) {

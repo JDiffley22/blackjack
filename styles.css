@@ -28,6 +28,13 @@ h1 {
     color: goldenrod;
 }
 
+.rules {
+    display: flex;
+    justify-content: center;
+    text-align: start;
+    width: 100%;
+}
+
 
 button {
     color: #016f32;
